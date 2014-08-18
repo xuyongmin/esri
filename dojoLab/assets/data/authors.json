@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Person A",
+        "avatar": "images/authors/person-a.png",
+        "bio": "Person A is Person A,and so on..."
+    },
+    {
+        "name": "Person B",
+        "avatar": "images/authors/person-b.png",
+        "bio": "Person B is Person B,and so on..."
+    },
+    {
+        "name": "Person C",
+        "avatar": "images/authors/person-c.png",
+        "bio": "Person C is Person C,and so on..."
+    },
+    {
+        "name": "Person D",
+        "avatar": "images/authors/person-d.png",
+        "bio": "Person D is Person D,and so on..."
+    },
+    {
+        "name": "Person E",
+        "avatar": "images/authors/person-e.png",
+        "bio": "Person E is Person E,and so on..."
+    },
+    {
+        "name": "Person F",
+        "avatar": "images/authors/person-f.png",
+        "bio": "Person F is Person F,and so on..."
+    },
+    {
+        "name": "Person G",
+        "avatar": "images/authors/person-g.png",
+        "bio": "Person G is Person G,and so on..."
+    },
+    {
+        "name": "Person H",
+        "avatar": "images/authors/person-h.png",
+        "bio": "Person H is Person H,and so on..."
+    },
+    {
+        "name": "Person I",
+        "avatar": "images/authors/person-i.png",
+        "bio": "Person I is Person I,and so on..."
+    }
+]

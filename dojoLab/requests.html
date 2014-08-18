@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Modern DOJO: Requests</title>
+</head>
+<body>
+    <ul id="userlist"></ul>
+    <!-- load Dojo -->
+    <script src="http://192.168.2.19:7000/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+    <script>
+        require(["dojo/request", "dojo/_base/array", "dojo/dom-construct", "dojo/dom", "dojo/domReady!"],
+	    function(request, arrayUtil, domConstruct, dom) {
+	 
+	        var deferred = request.get("./assets/data/user.json", {
+	            handleAs: "json"
+	        });
+	 
+	        deferred.then(function(res){
+	            var userlist = dom.byId("userlist");
+	 
+	            arrayUtil.forEach(res, function(user){
+	                domConstruct.create("li", {
+	                    id: user.id,
+	                    innerHTML: user.username + ": " + user.name
+	                }, userlist);
+	            });
+	        },function(err){
+	            // This shouldn't occur, but it's defined just in case
+	            alert("An error occurred: " + err);
+	        });
+	 
+		});
+    </script>
+</body>
+</html>

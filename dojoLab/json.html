@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>dojo json demo</title>
+	<script type="text/javascript">
+		dojoConfig = {
+			has:{},
+			app:{
+				compary:'www.gisquest.com',
+				author:'XuYongMin'
+			},
+        	async: true,
+        	isDebug: true
+		};
+	</script>
+	<script src="http://192.168.2.19/arcgis_js_api/library/3.9/3.9/init.js"></script>
+	<script type="text/javascript">
+		require(["dojo/json","dojo/_base/config"],function(JSON,djConfig){
+			console.log(djConfig);
+			var configStr = JSON.stringify(djConfig);
+			console.log(configStr);
+			var configJson = JSON.parse(configStr);
+			console.log(configJson);
+
+			var json = {name:'name',isok:true};
+			console.log(JSON.stringify(json));
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

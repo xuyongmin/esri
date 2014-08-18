@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Dojo实验室</title>
+  	<link rel="stylesheet" type="text/css" href="http://192.168.2.19:70http://192.168.2.19:7000/dijit/themes/claro/claro.css"/>
+    <link rel="stylesheet" type="text/css" href="./custom/dijit/themes/default/IndexWidget.css" />
+    <style type="text/css">
+        html { text-align:center }
+        body { margin:0 auto; text-align:left }
+        #indexContainer{
+            width: 822px;
+            margin:0px auto;
+        }
+
+        #indexContainer h2 {
+            font-size: 1.8em;
+            font-style: italic;
+            text-align: center;
+            vertical-align: center;
+            border: solid 1px #333333;
+            background: #cccccc;
+            margin: 10px 0px 0px 0px;
+        }
+    </style>
+  	<script type="text/javascript">
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad:false,
+            // This code registers the correct location of the "demo"
+            // package so we can load Dojo from the CDN whilst still
+            // being able to load local modules
+            packages: [{
+                name: "customDijit",
+                location: location.pathname.replace(/\/[^/]*$/, '') + '/custom/dijit'
+                //location: '/demo_js_api/demo-dojo/custhttp://192.168.2.19:7000/dijit'
+            }]
+        };
+    </script>
+</head>
+<body class="claro">
+    <div id="indexContainer"></div>
+    <script type="text/javascript" src="http://192.168.2.19:70http://192.168.2.19:7000/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require([
+            "dojo/parser",
+            "dojo/request",
+            "dojo/_base/array",
+            "dojo/dom",
+            "dojo/dom-construct",
+            "customDijit/IndexWidget",
+            "dojo/domReady!"
+            ],
+            function(parser,request,arrayUtil,dom,domConstruct,IndexWidget){
+                parser.parse();
+
+                request("./assets/data/index.json?_t="+Math.random(), {
+                handleAs: "json"
+                }).then(function(indexs){
+                    // Get a reference to our container
+                    var indexContainer = dom.byId("indexContainer");
+                    // console.log(indexs);
+                    arrayUtil.forEach(indexs, function(index){
+                        // Create our widget and place it
+                        //处理title
+                        var titleDiv = domConstruct.toDom("<h2 class='title'>"+index.title+"</h2>");
+                        domConstruct.place(titleDiv,indexContainer);
+                        //处理contents
+                        arrayUtil.forEach(index.contents,function(content){
+                            var widget = new IndexWidget(content).placeAt(indexContainer);
+                        });
+                    });
+                },function(err){
+                    console.log(err);
+                });
+            }
+        );
+    </script>
+</body>
+</html>

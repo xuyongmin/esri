@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Modern DOJO: Dojo Base and Core</title>
+</head>
+<body>
+    <h1 id="someNode">Hello</h1>
+    <!-- load Dojo -->
+    <script src="http://192.168.2.19:7000/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+    <script>
+        require([
+            "dojo/dom", 
+            "dojo/string", 
+            "dojo/domReady!"
+            ], function(dom, string){
+          dom.byId("someNode").innerHTML = string.trim("  I Like Trim Strings ");
+        });
+    </script>
+</body>
+</html>

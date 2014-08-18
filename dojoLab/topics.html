@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <input id="msg" name="msg" type="text" value="hello world" />
+    <title>Modern DOJO:Topics(publish/subscribe)</title>
+    <link rel="stylesheet" href="http://192.168.2.19:7000/dijit/themes/claro/claro.css">
+    <script>dojoConfig = {async: true, parseOnLoad: false}</script>
+</head>
+<body class="claro">
+    <button type="button" id="publish">发布 "some/topic"</button>
+    <div id="output">Nothing Yet...</div>
+    <script src='http://192.168.2.19:7000/dojo/dojo.js'></script>
+    
+    <script>
+        require([
+            "dojo/topic", 
+            "dojo/dom", 
+            "dojo/on", 
+            "dojo/domReady!"
+            ],
+        function(topic, dom, on){
+
+          var handle = topic.subscribe("some/topic", function(e){
+            dom.byId("output").innerHTML = "I received: " + e.msg;
+            // handle.remove(); //是否取消订阅
+          });
+
+          on(dom.byId("publish"), "click", function(){
+            var msg = dom.byId("msg").value;
+            topic.publish("some/topic", { msg: msg });
+          });
+
+        });
+    </script>
+</body>
+</html>

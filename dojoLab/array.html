@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dojo array demo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		dojoConfig = {
+			has:{},
+			app:{
+				compary:'www.gisquest.com',
+				author:'XuYongMin'
+			},
+        	async: true,
+        	isDebug: true
+		};
+	</script>
+	<script src="http://192.168.2.19:7000/dojo/dojo.js"></script>
+	<script type="text/javascript">
+		require(["dojo/_base/array","dojo/string"],function(array,string){
+			var arr = ["aaa","bbb","ccc","ddd","bbb"];
+			//indexOf
+			var currentKey = "bbb";
+			var logMsgTmp = "indexOf '${key}':${index}";
+		    var currentIndex = array.indexOf(arr,currentKey);
+		    var logMsg = string.substitute(logMsgTmp,{key:currentKey,index:currentIndex});
+		    console.log(logMsg);
+
+		    //lastIndexOf
+		    var lastIndex = array.lastIndexOf(arr,currentKey);
+		    logMsg = string.substitute(logMsgTmp,{key:currentKey,index:lastIndex})
+		    console.log(logMsg);
+
+		    //forEach
+		    var count = 0;
+		    array.forEach(arr,function(item){
+		    	console.log(item);
+		    	// count ++;
+		    	// if (count ==3) {
+		    	// 	break; //Uncaught SyntaxError: Illegal break statement 
+		    	// };
+		    });
+
+		    //some and break;
+		    count =0;
+		    array.some(arr,function(item){
+		    	console.log(item);
+		    	if (count == 3){
+		    		return false;
+		    	};
+		    	count++;
+		    });
+
+		    console.log(count);
+
+		    //filter
+		    var filterArr = array.filter(arr,function(item){
+		    	return (item == "bbb");
+		    });
+
+		    array.forEach(filterArr,function(item){
+		    	console.log(item);
+		    });
+
+		    var objArr = [{aaa:"aaa",bbb:"bbb"},{aaa:"ccc",bbb:"ddd"}];
+		    console.log(objArr);
+		    var filterObjArr = array.filter(objArr,function(item) {
+		    	return item.aaa=='aaa';
+		    });
+		    console.log(filterObjArr);
+
+		    array.forEach(filterObjArr,function(item) {
+		    	item.aaa='eee';
+		    });
+		    console.log(objArr);
+		    console.log(filterObjArr);
+		});
+	</script>
+</body>
+</html>

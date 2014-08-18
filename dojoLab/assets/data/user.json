@@ -1,0 +1,12 @@
+[
+    {
+        "id": "user1",
+        "username": "Bill",
+        "name": "Bill Gates"
+    },
+    {
+        "id": "user2",
+        "username": "Steve",
+        "name": "Steve Jobs"
+    }
+]

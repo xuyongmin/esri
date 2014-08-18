@@ -1,0 +1,310 @@
+[
+    {
+        "title":"DOJO AND JAVASCRIPT",
+        "contents":
+        [
+            {
+                "label": "DOJO官网",
+                "target": "_blank",
+                "url": "http://dojotoolkit.org/"
+            },
+            {
+                "label": "Hello Dojo",
+                "target": "_blank",
+                "url": "helloDojo.html"
+            },
+            {
+                "label": "Dojo Base and Core",
+                "target": "_blank",
+                "url": "coreBase.html"
+            },
+            {
+                "label": "Events",
+                "target": "_blank",
+                "url": "event.html"
+            },
+            {
+                "label": "Topics(publish/subscribe)",
+                "target": "_blank",
+                "url": "topics.html"
+            },
+            {
+                "label": "Promises(Deferred)",
+                "target": "_blank",
+                "url": "deferred.html"
+            },
+            {
+                "label": "跨域获取数据？",
+                "target": "_blank",
+                "url": "deferredCrossDomain.html"
+            },
+            {
+                "label": "Requests",
+                "target": "_blank",
+                "url": "requests.html"
+            },
+            {
+                "label": "Requests跨域通讯？",
+                "target": "_blank",
+                "url": "requestsCrossDomain.html"
+            },
+            {
+                "label": "Parser",
+                "target": "_blank",
+                "url": "parser.html"
+            },
+            {
+                "label": "dojo/query",
+                "target": "_blank",
+                "url": "http://dojotoolkit.org/reference-guide/1.10/dojo/query.html"
+            },
+            {
+                "label": "数组",
+                "target": "_blank",
+                "url": "array.html"
+            },
+            {
+                "label": "JSON",
+                "target": "_blank",
+                "url": "json.html"
+            },
+            {
+                "label": "神奇的lang",
+                "target": "_blank",
+                "url": "lang.html"
+            },
+            {
+                "label": "request/xhr",
+                "target": "_blank",
+                "url": "xhr.html"
+            },
+            {
+                "label": "第一个widget",
+                "target": "_blank",
+                "url": "firstWidget.html"
+            },
+            {
+                "label": "官方widget",
+                "target": "_blank",
+                "url": "authorWidget.html"
+            },
+            {
+                "label": "TocWidget",
+                "target": "_blank",
+                "url": "tocWidget.html"
+            },
+            {
+                "label": "cbtree部件",
+                "target": "_blank",
+                "url": "./cbtreeDemos/data/tree00.html"
+            },
+            {
+                "label": "widget的生命周期",
+                "target": "_blank",
+                "url": "lifeWidget.html"
+            },
+            {
+                "label": "布局",
+                "target": "_blank",
+                "url": "layout.html"
+            },
+            {
+                "label": "dojoConfig配置使用",
+                "target": "_blank",
+                "url": "http://blog.csdn.net/w495122810/article/details/7699786"
+            },
+            {
+                "label": "JS中的this",
+                "target": "_blank",
+                "url": "../simonWithJS/this.html"
+            },
+            {
+                "label": "JS中的arguments",
+                "target": "_blank",
+                "url": "http://blog.csdn.net/xcyuzhen/article/details/6078596"
+            },
+            {
+                "label": "甘露模型",
+                "target": "_blank",
+                "url": "../simonWithJS/test.html"
+            },
+            {
+                "label": "JS围棋",
+                "target": "_blank",
+                "url": "../simonWithJS/weiqi.html"
+            },
+            {
+                "label": "dojo1.6到 dojo1.8",
+                "target": "_blank",
+                "url": "http://www.cnblogs.com/owenChen/archive/2012/12/18/2824237.html"
+            },
+            {
+                "label": "dojo的rpc工具包",
+                "target": "_blank",
+                "url": "http://m.blog.csdn.net/blog/dojotoolkit/7816394"
+            }
+        ]
+    },
+    {
+        "title":"ArcGIS API for Javssript",
+        "contents":
+        [
+            {
+                "label": "在线文档",
+                "target": "_blank",
+                "url": "https://developers.arcgis.com/javascript/"
+            },
+            {
+                "label": "API官方部署",
+                "target": "_blank",
+                "url": "http://192.168.2.19/arcgis_js_api/Library/3.9/install.htm"
+            },
+            {
+                "label": "API部署(dojoConfig)",
+                "target": "_blank",
+                "url": "http://dingtao-wgs.blog.163.com/blog/static/502607142013422104363/"
+            },
+            {
+                "label": "Hello JS-API",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "地图加载(切片)",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "地图加载(动态)",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "地图加载(WMS/WMTS)",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "地图加载(自定义)",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "基础底图切换",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "图例，比例尺",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "图层显示隐藏、透明度",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "图属互查",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "几何图形绘制",
+                "target": "_blank",
+                "url": "http://192.168.2.19/demo_js_api/index.html"
+            },
+            {
+                "label": "图形增删改查",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "分析",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "制图",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "卷帘",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "多窗口对比",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "权限控制",
+                "target": "_blank",
+                "url": ""
+            },
+            {
+                "label": "WebGIS 整合案例",
+                "target": "_blank",
+                "url": "http://192.168.2.19:7777/index.html"
+            },
+            {
+                "label": "WebGIS 演示",
+                "target": "_blank",
+                "url": "http://192.168.2.19:7777/demo.html"
+            }
+        ]
+    },
+    {
+        "title":"同源策略与跨域通讯",
+        "contents":
+        [
+            {
+                "label": "JS中的eval",
+                "target": "_blank",
+                "url": "../simonWithJS/eval.html"
+            },
+            {
+                "label": "JS中的eval json window.name",
+                "target": "_blank",
+                "url": "../simonWithJS/evaljsonwinname.html"
+            },
+            {
+                "label": "javascript同源策略",
+                "target": "_blank",
+                "url": "http://www.cnblogs.com/youxin/archive/2012/09/02/2667914.html"
+            },
+            {
+                "label": "JS中的跨域通讯",
+                "target": "_blank",
+                "url": "http://192.168.2.19:7002/test2.html"
+            },
+            {
+                "label": "seajs官网",
+                "target": "_blank",
+                "url": "http://seajs.org/docs/"
+            },
+            {
+                "label": "seajs官网示例",
+                "target": "_blank",
+                "url": "http://192.168.2.19:7004/index.html"
+            },
+            {
+                "label": "easyXDM官网",
+                "target": "_blank",
+                "url": "http://easyxdm.net/wp/"
+            },
+            {
+                "label": "easyXDM官网示例",
+                "target": "_blank",
+                "url": "http://consumer.easyxdm.net/current/example/methods.html"
+            },
+            {
+                "label": "easyXDM下载",
+                "target": "_blank",
+                "url": "https://github.com/oyvindkinsey/easyXDM"
+            }
+        ]
+    }
+]

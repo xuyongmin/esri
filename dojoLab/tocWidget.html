@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Dojo实验室:tocWidget.html</title>
+<link rel="stylesheet" type="text/css" href="http://192.168.2.19:7000/dijit/themes/claro/claro.css"/>
+</head>
+<body class="claro">
+    <div data-dojo-type="customDijit/TocWidget"></div>
+	<script type="text/javascript">
+        // Instead of using data-dojo-config, we're creating a dojoConfig
+        // object *before* we load dojo.js; they're functionally identical,
+        // it's just easier to read this approach with a larger configuration.
+        var dojoConfig = {
+            async: true,
+            parseOnLoad:false,
+            isDebug: true,
+            has: {
+                "dojo-firebug": true, 
+                "dojo-debug-messages": true
+            },
+            // This code registers the correct location of the "demo"
+            // package so we can load Dojo from the CDN whilst still
+            // being able to load local modules
+            packages: [{
+                name: "customDijit",
+                location: location.pathname.replace(/\/[^/]*$/, '') + '/custom/dijit'
+                //location: '/demo_js_api/demo-dojo/custhttp://192.168.2.19:7000/dijit'
+            }]
+        };
+    </script>
+
+    <!--<script src="http://192.168.2.19/arcgis_js_api/library/3.9/3.9/init.js"></script>-->
+    <script type="text/javascript" src="http://192.168.2.19:7000/dojo/dojo.js"></script>
+    <script type="text/javascript">
+    	require(["dojo/parser","customDijit/TocWidget","dojo/domReady!"],function(parser){
+    		parser.parse();
+    	});
+    </script>
+</body>
+</html>

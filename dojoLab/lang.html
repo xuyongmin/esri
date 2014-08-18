@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>dojo lang demo</title>
+	<script type="text/javascript">
+		dojoConfig = {
+			has:{},
+			app:{
+				compary:'www.gisquest.com',
+				author:'XuYongMin'
+			},
+        	async: true,
+        	isDebug: true
+		};
+	</script>
+	<script src="http://192.168.2.19/arcgis_js_api/library/3.9/3.9/init.js"></script>
+	<script type="text/javascript">
+		require(["dojo/_base/lang"],function(lang){
+			// console.log(lang);
+			var obj = {a:"this is a",b:"this is b"};
+			console.dir(obj);
+
+			var thing = lang.clone(obj);
+			console.dir(thing);
+
+			var slow = lang.mixin(obj);
+			console.dir(slow);
+			
+
+			var newarray = lang.clone(["a","b","c"]);
+			console.dir(newarray);
+
+			//delegate
+			var anOldObject = { bar: "baz" };
+		  	var myNewObject = lang.delegate(anOldObject, { thud: "xyzzy"});
+		  	console.dir(anOldObject.bar);
+		  	console.dir(myNewObject.bar);
+		  	anOldObject.bar = "thonk";
+		  	console.dir(anOldObject);
+		  	console.dir(myNewObject.bar);
+			//exists()
+			var allStr = "this is hello lang!";
+			var keyStr = "hello";
+			// console.log(lang.exists(keyStr,allStr)); //Uncaught TypeError: Cannot use 'in' operator to search for 'hello' in this is hello lang! 
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
