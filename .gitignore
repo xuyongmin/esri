@@ -1,0 +1,18 @@
+#####git ignore folders and files#####
+
+##ignore files##
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.mov
+*.rar
+*.zip
+*.tar
+*.tar.gz
+*.suo ##Microsoft Visual Studio file
+
+##ignore folders##
+Bin/
+obj/
+
