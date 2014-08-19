@@ -10,7 +10,7 @@
 *.zip
 *.tar
 *.tar.gz
-*.suo ##Microsoft Visual Studio file
+*.suo
 
 ##ignore folders##
 Bin/
