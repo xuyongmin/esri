@@ -157,7 +157,7 @@
             {
                 "label": "API官方部署",
                 "target": "_blank",
-                "url": "http://192.168.2.19/arcgis_js_api/Library/3.9/install.htm"
+                "url": "http://127.0.0.1/arcgis_js_api/Library/3.9/install.htm"
             },
             {
                 "label": "API部署(dojoConfig)",
@@ -167,17 +167,17 @@
             {
                 "label": "Hello JS-API",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "地图加载(切片)",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "地图加载(动态)",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "地图加载(WMS/WMTS)",
@@ -192,12 +192,12 @@
             {
                 "label": "基础底图切换",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "图例，比例尺",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "图层显示隐藏、透明度",
@@ -212,7 +212,7 @@
             {
                 "label": "几何图形绘制",
                 "target": "_blank",
-                "url": "http://192.168.2.19/demo_js_api/index.html"
+                "url": "http://127.0.0.1/demo_js_api/index.html"
             },
             {
                 "label": "图形增删改查",
@@ -247,12 +247,12 @@
             {
                 "label": "WebGIS 整合案例",
                 "target": "_blank",
-                "url": "http://192.168.2.19:7777/index.html"
+                "url": "http://127.0.0.1:7777/index.html"
             },
             {
                 "label": "WebGIS 演示",
                 "target": "_blank",
-                "url": "http://192.168.2.19:7777/demo.html"
+                "url": "http://127.0.0.1:7777/demo.html"
             }
         ]
     },
@@ -278,7 +278,7 @@
             {
                 "label": "JS中的跨域通讯",
                 "target": "_blank",
-                "url": "http://192.168.2.19:7002/test2.html"
+                "url": "http://127.0.0.1:7002/test2.html"
             },
             {
                 "label": "seajs官网",
@@ -288,7 +288,7 @@
             {
                 "label": "seajs官网示例",
                 "target": "_blank",
-                "url": "http://192.168.2.19:7004/index.html"
+                "url": "http://127.0.0.1:7004/index.html"
             },
             {
                 "label": "easyXDM官网",

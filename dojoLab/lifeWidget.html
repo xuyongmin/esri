@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 	<title>Dojo实验室:lifeWidget.html</title>
-<link rel="stylesheet" type="text/css" href="http://192.168.2.19:7000/dijit/themes/claro/claro.css"/>
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:7000/dijit/themes/claro/claro.css"/>
 </head>
 <body class="claro">
     <div data-dojo-type="customDijit/LifeWidget"></div>
@@ -24,13 +24,13 @@
             packages: [{
                 name: "customDijit",
                 location: location.pathname.replace(/\/[^/]*$/, '') + '/custom/dijit'
-                //location: '/demo_js_api/demo-dojo/custhttp://192.168.2.19:7000/dijit'
+                //location: '/demo_js_api/demo-dojo/custhttp://127.0.0.1:7000/dijit'
             }]
         };
     </script>
 
-    <!--<script src="http://192.168.2.19/arcgis_js_api/library/3.9/3.9/init.js"></script>-->
-    <script type="text/javascript" src="http://192.168.2.19:7000/dojo/dojo.js"></script>
+    <!--<script src="http://127.0.0.1/arcgis_js_api/library/3.9/3.9/init.js"></script>-->
+    <script type="text/javascript" src="http://127.0.0.1:7000/dojo/dojo.js"></script>
     <script type="text/javascript">
     	require(["dojo/parser","customDijit/LifeWidget","dojo/domReady!"],function(parser){
     		parser.parse();

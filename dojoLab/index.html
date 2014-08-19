@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 	<title>Dojo实验室</title>
-  	<link rel="stylesheet" type="text/css" href="http://192.168.2.19:70http://192.168.2.19:7000/dijit/themes/claro/claro.css"/>
+  	<link rel="stylesheet" type="text/css" href="http://127.0.0.1:7000/dijit/themes/claro/claro.css"/>
     <link rel="stylesheet" type="text/css" href="./custom/dijit/themes/default/IndexWidget.css" />
     <style type="text/css">
         html { text-align:center }
@@ -35,14 +35,14 @@
             packages: [{
                 name: "customDijit",
                 location: location.pathname.replace(/\/[^/]*$/, '') + '/custom/dijit'
-                //location: '/demo_js_api/demo-dojo/custhttp://192.168.2.19:7000/dijit'
+                //location: '/demo_js_api/demo-dojo/custhttp://127.0.0.1:7000/dijit'
             }]
         };
     </script>
 </head>
 <body class="claro">
     <div id="indexContainer"></div>
-    <script type="text/javascript" src="http://192.168.2.19:70http://192.168.2.19:7000/dojo/dojo.js"></script>
+    <script type="text/javascript" src="http://127.0.0.1:70http://127.0.0.1:7000/dojo/dojo.js"></script>
     <script type="text/javascript">
         require([
             "dojo/parser",

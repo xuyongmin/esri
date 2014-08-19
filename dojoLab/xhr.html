@@ -6,12 +6,12 @@
 </head>
 <body>
     <!-- load Dojo -->
-    <script src="http://192.168.2.19:7000/dojo/dojo.js"
+    <script src="http://127.0.0.1:7000/dojo/dojo.js"
             data-dojo-config="async: true"></script>
     <script>
         require(["dojo/request/script"], function (requestScript) {
-            //var url = "https://api.github.com/rephttp://192.168.2.19:7000/dojo/dojo/pulls" + "?_t="+Math.random();
-            var url = "http://192.168.2.19/mapconfig/tocConfig.ashx?_t="+Math.random();
+            //var url = "https://api.github.com/rephttp://127.0.0.1:7000/dojo/dojo/pulls" + "?_t="+Math.random();
+            var url = "http://127.0.0.1/mapconfig/tocConfig.ashx?_t="+Math.random();
             var def = requestScript.get(url,{ jsonp: "callback" });
             console.log(def);
 
