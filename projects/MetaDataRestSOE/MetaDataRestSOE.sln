@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据操作", "数据操作", "{CEC96FED-537E-40FF-8ACC-BF3DF5BEC4E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaDataRestSOE", "MetaDataRestSOE\MetaDataRestSOE.csproj", "{6E7108C7-94F3-4757-BF1E-FB616248B945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaDataSDE", "MetaDataSDE\MetaDataSDE.csproj", "{1EF9D426-DC57-4EF5-817C-EFBB523D810C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E7108C7-94F3-4757-BF1E-FB616248B945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7108C7-94F3-4757-BF1E-FB616248B945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7108C7-94F3-4757-BF1E-FB616248B945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7108C7-94F3-4757-BF1E-FB616248B945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF9D426-DC57-4EF5-817C-EFBB523D810C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF9D426-DC57-4EF5-817C-EFBB523D810C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF9D426-DC57-4EF5-817C-EFBB523D810C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF9D426-DC57-4EF5-817C-EFBB523D810C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,203 @@
+#######################
+SaveFeatures
+#######################
+connectionString:
+{
+	"server":"192.168.6.6",
+	"instance":"5151",
+	"database":"",
+	"user":"gtsde",
+	"password":"gtsde",
+	"version":"SDE.DEFAULT"
+}
+featureClass:
+{
+	"name":"ST_SOE_POLYGON"
+}
+面
+features:
+[
+	{
+		"attribute":[
+										{
+											"name":"FNAME",
+										 	"value":"测试地块"
+										},
+										{
+											"name":"FLX",
+											"value":"1"
+										}
+									],
+		 "geometry":{
+									"rings":[
+														[
+															[2529318.00,423939.80,0],
+															[2529318.18,423865.61,0],
+															[2529298.89,423900.12,0],
+															[2529271.81,423948.54,0],
+															[2529271.10,423949.98,1],
+															[2529270.54,423951.47,0],
+															[2529318.00,423939.80,0]
+														]
+													],
+									"spatialReference":{"wkid":2435}
+							  },
+		 "filterWhere":{
+											"filter":""
+										}
+	}
+]
+线
+features:
+[
+	{
+		"attribute":[
+										{
+											"name":"FNAME",
+										 	"value":"测试线"
+										},
+										{
+											"name":"FLX",
+											"value":"1"
+										}
+									],
+		 "geometry":{
+									"paths":[
+														[
+															[2529271.81,423948.54,0],
+															[2529271.10,423949.98,1],
+															[2529270.54,423951.47,0],
+															[2529318.00,423939.80,0]
+														]
+													],
+									"spatialReference":{"wkid":2435}
+							  },
+		 "filterWhere":{
+											"filter":""
+										}
+	}
+]
+点
+features:
+[
+	{
+		"attribute":[
+										{
+											"name":"FNAME",
+										 	"value":"测试点"
+										},
+										{
+											"name":"FLX",
+											"value":"1"
+										}
+									],
+		 "geometry":{
+									"points":[2529318.00,423939.80,0],
+									"spatialReference":{"wkid":2435}
+							  },
+		 "filterWhere":{
+											"filter":""
+										}
+	}
+]
+
+返回值：
+{
+	result:{
+						"isSucess":"true",
+						"count":"1",
+						"outMsg":""
+				 }
+}
+
+#######################
+DeleteFeatures
+#######################
+connectionString:
+{
+	"server":"192.168.6.6",
+	"instance":"5151",
+	"database":"",
+	"user":"gtsde",
+	"password":"gtsde",
+	"version":"SDE.DEFAULT"
+}
+featureClass:
+{
+	"name":"ST_NZYDK"
+}
+filterWhere:
+{
+	"filter":"DK_GUID='DKGUID'"
+}
+
+返回值：
+{
+	result:{
+						"isSucess":"true",
+						"count":"1",
+						"outMsg":""
+				 }
+}
+
+#######################
+GetFeatures
+#######################
+connectionString:
+{
+	"server":"192.168.6.6",
+	"instance":"5151",
+	"database":"",
+	"user":"gtsde",
+	"password":"gtsde",
+	"version":"SDE.DEFAULT"
+}
+featureClass:
+{
+	"name":"ST_NZYDK"
+}
+filterWhere:
+{
+	"filter":"DK_GUID='DKGUID'"
+}
+
+返回值：
+{
+	fields:
+	[
+		{
+			"name":"XM_GUID",
+			"alias":"项目标识"
+		},
+		{
+			"name":"DK_GUID",
+			"alias":"地块标识"
+		}
+	]
+	features:
+	[
+		{
+			"attribute":[
+											{
+												"name":"XM_GUID",
+											 	"value":"XMGUID"
+											},
+											{
+												"name":"DK_GUID",
+												"value":"DKGUID"
+											}
+										],
+			 "geometry":{
+										"rings":[
+															[
+																[39494553,3549365],
+																[39499419,3548878],
+																[39498608,3546769],
+																[39494553,3549365]
+															]
+														],
+										"spatialReference":{"wkid":2363}
+								  }
+		}
+	]
+}
