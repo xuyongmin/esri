@@ -7,4 +7,8 @@ dojo实验室，ESRI的arcgis api for Javascript是基于dojo框架开发的api�
 projects文件夹
  GeoTools项目：地图工具箱，主要进行经纬度坐标转换盒图幅号生成。
 
+ MetaDataRestSOE项目：图形增删改查SOE服务，支持10.1及以上。
+
+ PrintRestSOE项目：图形制图SOE服务，支持10.1及以上。
+
 ESRI Arcgis Demo Source
