@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./js/simon.core.js"></script>
+	<script type="text/javascript">
+		var Person = Class({
+			Create: function(name,age){
+				this.base();
+				this.name = name;
+				this.age = age;
+			},
+			SayHello: function(){
+				console.log("Hello, I'm " + this.name + "," + this.age + "years old.");
+			},
+			toString: function(){
+				return this.name;
+			}
+		});
+		var Employee = Class(Person,{
+			Create: function(name,age,salary) {
+				this.base(name,age);
+				this.salary = salary;
+			},
+			ShowMeTheMoney: function() {
+				console.log(this + " $" + this.salary);
+			}
+		});
+
+		var BillGates = new Person("Bill Gates",53);
+		var SteveJobs = new Employee("Steve Jobs",53,1234);
+		console.log(BillGates);
+		BillGates.SayHello();
+		SteveJobs.SayHello();
+		SteveJobs.ShowMeTheMoney();
+
+		var LittleBill = new BillGates.Type("Little Bill",6);
+		LittleBill.SayHello();
+
+		console.log(BillGates.isA(Person));
+		console.log(BillGates.isA(Employee));
+		console.log(SteveJobs.isA(Person));
+		console.log(SteveJobs.isA(Employee));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

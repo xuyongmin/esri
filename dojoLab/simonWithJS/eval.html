@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>javascript eval,json,function</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var funcStr = "showMsg()";
+		function showMsg(){
+			var msg = 'hello World';
+			console.log(msg);
+		}
+		eval(funcStr);
+
+		function showMsg1(msg) {
+			console.log(msg);
+		}
+		var funcStr1 = "showMsg1(\"hello world\")";
+		eval(funcStr1);
+
+		function showMsg2(json) {
+			console.log(json);
+		}
+
+		var funcStr2 = "showMsg2({'name':'hello world!'})";
+		eval(funcStr2);
+
+		function showMsg3(divid,params) {
+			console.log(divid);
+			console.log(params);
+		}
+
+		console.log(typeof window.name);
+		var params = ["'aaa'","{'name':'hello world!','isok':'ture'}"];
+		console.log(params);
+		window.name = params;
+		console.log(typeof window.name);
+		console.log(window.name);
+
+		var funcStr3 = "showMsg3(" + window.name + ")";
+		eval(funcStr3);
+
+		var jsonStr = "({aaa:'aaa',bbb:'bbb'})";
+		console.log(eval(jsonStr));
+
+		var params1 = [{aaa:'aaa',bbb:'bbb'},{ccc:'ccc',ddd:'ddd'}];
+		console.log(params1);
+		window.name = params1;
+		console.log(window.name);
+
+		var funcStr4 = "showMsg3(" + window.name + ")";
+		console.log(funcStr4);
+		eval(funcStr4);
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Javascript this</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function WhoAmI() { //定义一个函数WhoAmI
+			alert("I'm " + this.name + " of " + typeof(this));
+		}
+
+		WhoAmI(); //output:I'm of object
+
+		var BillGates={name:"Bill GAtes"};
+		BillGates.WhoAmI = WhoAmI;
+		BillGates.WhoAmI();
+
+		var SteveJobs = {name:"Steve Jobs"};
+		SteveJobs.WhoAmI = WhoAmI;
+		SteveJobs.WhoAmI();
+
+		WhoAmI.call(BillGates);
+
+		WhoAmI.call(SteveJobs);
+
+		BillGates.WhoAmI.call(SteveJobs);
+		SteveJobs.WhoAmI.call(BillGates);
+	</script>
+</body>
+</html>

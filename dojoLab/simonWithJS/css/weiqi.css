@@ -1,0 +1,54 @@
+/*weiqi.html*/
+#weiqiBoard {
+	position: relative;
+	width:500px;
+	height: 500px;
+	background: green;
+}
+#weiqiBoard div {
+	position:absolute;
+	width: 23px;
+	height: 23px;
+}
+.B0 {
+	background-image: url('B0.gif');
+}
+.B1 {
+	background-image: url('B1.gif');
+}
+.B2 {
+	background-image: url('B2.gif');
+}
+.B3 {
+	background-image: url('B3.gif');
+}
+.B4 {
+	background-image: url('B4.gif');
+}
+.B5 {
+	background-image: url('B5.gif');
+}
+.B6 {
+	background-image: url('B6.gif');
+}
+.B7 {
+	background-image: url('B7.gif');
+}
+.B8 {
+	background-image: url('B8.gif');
+}
+.BX {
+	background-image: url('BX.gif');
+}
+.D0 {
+	background-image: url('D0.gif');
+}
+.D1 {
+	background-image: url('D1.gif');
+}
+.C0 {
+	background-image: url('C0.gif');
+}
+.C1 {
+	background-image: url('C1.gif');
+}

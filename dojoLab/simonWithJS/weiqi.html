@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>禅棋传说</title><link rel="stylesheet" type="text/css" href="./css/weiqi.css"/>
+</head>
+<body>
+<div id="weiqiBoard"></div>
+<script type="text/javascript" src="../userStrict.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	//定义一个棋位类
+	var Site = {
+		Create: function(x,y){
+			var me = document.createElement('div');//创建一个div对象，将其扩展并封装成棋位
+			var weiqiContainer = document.getElementById('weiqiBoard');
+			//console.log(weiqiContainer);
+			weiqiContainer.appendChild(me);
+			me.x = x;
+			me.y = y;
+			me.style.left = x*23 + 'px';
+			me.style.top = y*23 + 'px';
+
+			var s = ((x-9)%9?0:(x-9)/9) + 1 + (((y-9)%9?0:(y-9)/9) + 1)*3;
+			me._backStyle='B'+((s==4&&(x/3)%2==1&&(y/3)%2==1)?'X':s);
+			me.Fill=this.Fill;
+			me.Kill=this.Kill;
+			me.Tight=this.Tight;
+			me.Fill();
+
+			me.onclick=this.Play;
+
+			return me;
+		},
+		Fill:function(dot,going){
+			if (dot==undefined) {
+				this.className=this._backStyle;
+			}else{
+				this.className = (going ? "C" :"D") + dot;
+			};
+			this.dot = dot;
+		},
+		Play:function(){
+			if (this.dot == undefined) {
+				// var deads = this.Kill(current^1); //计算可以杀死的子
+				// if(deads.length == 1 && this == rob) {
+				// 	return;
+				// }
+
+				// for (var i=0;i<deads.length;i++) {
+				// 	deads[i].Fill();
+				// }
+
+				// if(i==1) {
+				// 	rob = deads[0];
+				// }else if (i>0 || !this.Tight(current)) {
+				// 	rob = null;
+				// }else {
+				// 	return;
+				// }
+
+				sound.play();
+				// var step = Tracks[Tracks.length -1];
+				// if(step) {
+				// 	step.site.Fill(step.site.dot);
+				// }
+				this.Fill(current);
+				// Tracks.push(new Step(this,deads));
+				current ^= 1;
+			};
+		},
+		Tight:function(dot){ //计算紧气的棋子
+			var life = this.dot == undefined? this: undefined;//当前位置无子则算一口气
+			dot = dot == undefined?this.dot :dot;
+			if (dot == undefined) {
+				return undefined;
+			}
+			var block = this.dot == undefined ? []:[this];
+			var i = this.dot == undefined ? 0 : 1;
+			var site = this;
+			while (true) {
+				for (var dx = -1;dx <=1;dx++) {
+					for (var dy = -1;dy <= 1; dy++) {
+						if (!dx^!dy) {
+							link = GetSite(site.x + dx, site.y + dy);
+							if (link) { //有位
+								if (link.dot != undefined) { //有子
+									if (link.dot == dot && block.indexOf(link)<0) {
+										block.push(link);
+									}
+								}else if (!life) {
+									like = link;
+								}else if (life != link) {
+									return undefined; //如果有两口气以上，则无须再计算
+								}
+							}
+						}
+						if ( i >= block.length) break;
+						site = block[i];
+						i++;
+					}
+				}
+			}
+			return block; //返回只有一口气的块。
+		},
+		Kill:function(dot){ //计算杀死的棋子
+			var deads = [];
+			for (var dx=-1;dx<=1;dx++) {
+				for (var dy=-1;dy<=1;dy++) {
+					if (!dx^!dy) {
+						var site = GetSite(this.x + dx, this.y + dy);
+						if (site && (site.dot == dot)) {
+							var block = site.Tight();
+							if(block) {
+								deads=deads.concat(block);
+							}
+						}
+					}
+				}
+			}
+			return deads;//返回可以提子的死棋子
+		}
+	};
+
+	var Board = new Array(19); //全局的Board数组，表示棋盘
+	var Tracks = []; //行棋线索数组，素组元素是Step对象
+	var current = 0; //当前要下的子，0表示黑仔，1表示白子，互相交替
+	var rob = null; //如果有打劫的位置，记录打劫位置
+	for (var x=0;x<19;x++){
+		Board[x] = new Array(19);
+		for (var y=0;y<19;y++){
+			Board[x][y] = Site.Create(x,y);
+		}
+	}
+
+	//sound
+	if (navigator.userAgent.indexOf('MSIE')>-1) {//IE
+		var sound = document.body.appendChild(document.createElement('bgsound'));
+		sound.play=function(){
+			this.src='./css/msg.wav';
+		}
+	}else {
+		var sound = document.body.appendChild(document.createElement('span'));
+		sound.play = function(wav) {
+			this.innerHTML='<bgsound src="./css/msg.wav">';
+		}
+	};
+
+	document.body.oncontextmenu = function() { //悔棋事件
+		var step = Tracks.pop();
+		if (step) {
+			step.site.Fill();
+			for (var i=0;i<step.deads.length;i++) {
+				step.deads[i].Fill(current);
+			}
+			step = Tracks[Tracks.length -1];
+			if (step) {
+				step.site.Fill(current,true);
+			}
+			current ^=1;
+		}
+		return false;//不弹出菜单
+	}
+
+	function GetSite(x,y) {//从棋盘获取棋位的函数，越界不抛出异常
+		if (x>=0 && x<19 && y>=0 && y<19) {
+			return Board[x][y];
+		}
+	}
+
+	function Step(site,deads) { //棋步类，记录每一步棋的状态
+		this.site = site;
+		this.deads = deads;//记录被当前棋步杀死的棋子集合
+	}
+
+	//]]>
+</script>
+</body>
+</html>
