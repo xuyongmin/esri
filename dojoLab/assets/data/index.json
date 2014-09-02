@@ -116,7 +116,7 @@
             {
                 "label": "JS中的this",
                 "target": "_blank",
-                "url": "../simonWithJS/this.html"
+                "url": "./simonWithJS/this.html"
             },
             {
                 "label": "JS中的arguments",
@@ -126,12 +126,12 @@
             {
                 "label": "甘露模型",
                 "target": "_blank",
-                "url": "../simonWithJS/test.html"
+                "url": "./simonWithJS/test.html"
             },
             {
                 "label": "JS围棋",
                 "target": "_blank",
-                "url": "../simonWithJS/weiqi.html"
+                "url": "./simonWithJS/weiqi.html"
             },
             {
                 "label": "dojo1.6到 dojo1.8",
@@ -142,6 +142,22 @@
                 "label": "dojo的rpc工具包",
                 "target": "_blank",
                 "url": "http://m.blog.csdn.net/blog/dojotoolkit/7816394"
+            }
+        ]
+    },
+    {
+        "title": "Dojo与服务通讯",
+        "contents":
+        [
+            {
+                "label": "Dojo访问Yahoo-JSONP服务",
+                "target": "_blank",
+                "url": "./dojoYahoo.html"
+            },
+            {
+                "label": "Dojo访问WCF-REST服务",
+                "target": "_blank",
+                "url": "./dojoWCFRest.html"
             }
         ]
     },
