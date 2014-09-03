@@ -15,4 +15,5 @@
 ##ignore folders##
 Bin/
 obj/
+node_modules/
 
