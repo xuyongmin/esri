@@ -11,6 +11,9 @@ nodejsLab
 ===============
 nodejs实验室，一些nodejs的案例
 
+增加BYVoid的microblog练习代码
+此处感谢yuanzm提供的《nodejs开发指南》微博实例express4.x版 [https://github.com/yuanzm/microblog]源码，使我在及少量的修改代码情况下能够在windows7下面跑起来。
+
 ===============
 projects
 ===============
